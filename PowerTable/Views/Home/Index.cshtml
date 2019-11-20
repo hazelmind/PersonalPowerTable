@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+    <div class="text-center display-4">
+        <h3 class="display-4">Welcome to your very own <br /></h3>
+        <h1>Power Table Maker!</h1><br />
+        <div class="blockquote badge-dark">
+            <form method="post" asp-controller="Home" asp-action="Result">
+                <label name="UserNumber">Enter a number to view it's power values</label><br />
+                <input type="number" name="UserNumber" value="UserNumber" /><br /><br />
+                <label name="UserMax">Enter the power value the table will show</label><br />
+                <input type="number" name="UserMax" value="UserMax" /><br /><br />
+                <button type="submit" class="btn-block btn-outline-dark">Create Table</button>
+            </form>
+        </div>
+    </div>

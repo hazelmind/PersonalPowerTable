@@ -1,0 +1,32 @@
+﻿@model NumberTable
+@{
+    ViewData["Title"] = "Result";
+}
+    <div class="align-content-center text-center align-items-center">
+        <h1>Result</h1>
+
+        <table border="1" align="center" class="table-active table-dark table-hover" cellpadding="10" cellspacing="20">
+            <tr>
+                <td><h3>#</h3></td>
+                <td><h3>Power</h3></td>
+                <td><h3>Answer</h3></td>
+            </tr>
+            <tbody>
+                @for (int i = 0; i <= Model.UserMax; i++)
+                {
+                    <tr>
+                        <td>
+                            @Model.UserNumber
+                        </td>
+                        <td>
+                            to the @i power
+                        </td>
+                        <td>
+                            @Math.Pow(Model.UserNumber, i)
+                        </td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
